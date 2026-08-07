@@ -14,37 +14,37 @@ import random  # needed for challenge problems
 # #######################
 
 
-# def pizzas_needed(people, slices_per_person, slices_per_pizza):
-#     """Calculate how many whole pizzas to order (always round up)."""
-#     total_slices_needed = people * slices_per_person
-#     pizzas = math.ceil(total_slices_needed / slices_per_pizza)
-#     return pizzas
+def pizzas_needed(people, slices_per_person, slices_per_pizza):
+    """Calculate how many whole pizzas to order (always round up)."""
+    total_slices_needed = people * slices_per_person
+    pizzas = math.ceil(total_slices_needed / slices_per_pizza)
+    return pizzas
 
 
-# def leftover_slices(people, slices_per_person, slices_per_pizza):
-#     """Calculate how many slices will be leftover."""
-#     total_slices_needed = people * slices_per_person
-#     pizzas = pizzas_needed(people, slices_per_person, slices_per_pizza)
-#     total_slices_ordered = pizzas * slices_per_pizza
-#     leftover = total_slices_ordered - total_slices_needed
-#     return leftover
+def leftover_slices(people, slices_per_person, slices_per_pizza):
+    """Calculate how many slices will be leftover."""
+    total_slices_needed = people * slices_per_person
+    pizzas = pizzas_needed(people, slices_per_person, slices_per_pizza)
+    total_slices_ordered = pizzas * slices_per_pizza
+    leftover = total_slices_ordered - total_slices_needed
+    return leftover
 
 
-# print("=== PIZZA PARTY PLANNER ===")
-# guests = int(input("How many guests? "))
-# slices_pp = int(input("Slices per person: "))
-# slices_pizza = int(input("Slices per pizza: "))
-# print()
+print("=== PIZZA PARTY PLANNER ===")
+guests = int(input("How many guests? "))
+slices_pp = int(input("Slices per person: "))
+slices_pizza = int(input("Slices per pizza: "))
+print()
 
-# pizzas = pizzas_needed(guests, slices_pp, slices_pizza)
-# total = pizzas * slices_pizza
-# leftover = leftover_slices(guests, slices_pp, slices_pizza)
+pizzas = pizzas_needed(guests, slices_pp, slices_pizza)
+total = pizzas * slices_pizza
+leftover = leftover_slices(guests, slices_pp, slices_pizza)
 
-# print("=== PARTY SUMMARY ===")
-# print(f"Guests:           {guests}")
-# print(f"Pizzas to order:  {pizzas}")
-# print(f"Total slices:     {total}")
-# print(f"Leftover slices:  {leftover}")
+print("=== PARTY SUMMARY ===")
+print(f"Guests:           {guests}")
+print(f"Pizzas to order:  {pizzas}")
+print(f"Total slices:     {total}")
+print(f"Leftover slices:  {leftover}")
 
 # #######################
 # # Solution Problem 1 - Challenge
@@ -182,10 +182,10 @@ import random  # needed for challenge problems
 # #######################
 
 
-# def attack(defender_hp, damage):
-#     """Subtract damage from defender HP and return new HP (minimum 0)."""
-#     new_hp = defender_hp - damage
-#     return max(0, new_hp)  # ensure HP doesn't go negative
+def attack(defender_hp, damage):
+    """Subtract damage from defender HP and return new HP (minimum 0)."""
+    new_hp = defender_hp - damage
+    return max(0, new_hp)  # ensure HP doesn't go negative
 
 
 # def is_alive(hp):

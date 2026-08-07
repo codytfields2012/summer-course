@@ -85,5 +85,7 @@ class TestBook:
 
 # Note: The following functions have NO tests yet (0% coverage):
 # - validate_isbn()
+def test_validate_isbn(self):
+    
 # - format_book_info()
 # - books_by_decade()
