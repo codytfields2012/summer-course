@@ -151,45 +151,49 @@
 
 ### problem 4 ###
 
-def check_fitness(score):
-    return score >= 70
+# def check_fitness(score):
+#     return score >= 70
 
-ranks = ['Corporal', 'Sergeant', 'Lieutenant']
-def check_rank(rank):
-    return rank in ranks
+# ranks = ['Corporal', 'Sergeant', 'Lieutenant']
+# def check_rank(rank):
+#     return rank in ranks
 
-def check_service_years(years):
-    return years >= 2
+# def check_service_years(years):
+#     return years >= 2
 
-name = input("Enter Soldier's Name:  \n")
-s_rank = input("Enter Soldier's Rank: \n")
-fitness_score = int(input(f"Enter {s_rank} {name}'s fitness score: \n"))
-years_of_service = int(input(f"Enter {s_rank} {name}'s current years of service: \n"))
+# name = input("Enter Soldier's Name:  \n")
+# s_rank = input("Enter Soldier's Rank: \n")
+# fitness_score = int(input(f"Enter {s_rank} {name}'s fitness score: \n"))
+# years_of_service = int(input(f"Enter {s_rank} {name}'s current years of service: \n"))
 
-# 'checks' is a list of tuples - each pairing a label like "rank" with the true/false result of calling that check function.
-checks = [("Rank", check_rank(s_rank)), ("Fitness", check_fitness(fitness_score)), ("Years of Service", check_service_years(years_of_service))]
+# # 'checks' is a list of tuples - each pairing a label like "rank" with the true/false result of calling that check function.
+# checks = [("Rank", check_rank(s_rank)), ("Fitness", check_fitness(fitness_score)), ("Years of Service", check_service_years(years_of_service))]
 
-results = []
-# the for loop then walks through each tuple, unpacking it into 'check_name' and 'result', and appends just the boolean into a separate 'results' list.
-for check_name, result in checks:
-    results.append(result)
+# results = []
+# # the for loop then walks through each tuple, unpacking it into 'check_name' and 'result', and appends just the boolean into a separate 'results' list.
+# for check_name, result in checks:
+#     results.append(result)
 
-# all() is a built-in function that returns 'True' only if every item in the list is 'True' - the moment it finds one 'False', the whole thing short-circuits to 'False'. 
-# thats a clean way to express "all three checks must pass", instead of writing 'check1 and check2 and check3' by hand
-cleared = all(results)
+# # all() is a built-in function that returns 'True' only if every item in the list is 'True' - the moment it finds one 'False', the whole thing short-circuits to 'False'. 
+# # thats a clean way to express "all three checks must pass", instead of writing 'check1 and check2 and check3' by hand
+# cleared = all(results)
 
-print(f"\n --- Clearance Report for {s_rank} {name} ---")
+# print(f"\n --- Clearance Report for {s_rank} {name} ---")
 
-# this loops over 'checks' agagin (this time using both the name and result) to print a line per check, coverting the raw boolean into a readable "PASS" or "FAIL" label. 
-# Do your fitness score and years-of-service thresholds match what I assumed (70+ and 2+)
+# # this loops over 'checks' agagin (this time using both the name and result) to print a line per check, coverting the raw boolean into a readable "PASS" or "FAIL" label. 
+# # Do your fitness score and years-of-service thresholds match what I assumed (70+ and 2+)
 
-for check_name, result in checks:
-    status = "Pass" if result else "FAIL"
-    print(f"{check_name}: {status}")
+# for check_name, result in checks:
+#     status = "Pass" if result else "FAIL"
+#     print(f"{check_name}: {status}")
 
-if cleared:
-    print(f"\nFinal Decision: {s_rank} {name} is CLEARED.")
-else:
-    print(f"\nFinal Decision: {s_rank} {name} is NOT CLEARED.")
+# if cleared:
+#     print(f"\nFinal Decision: {s_rank} {name} is CLEARED.")
+# else:
+#     print(f"\nFinal Decision: {s_rank} {name} is NOT CLEARED.")
 
-    
+
+
+### PROBLEM 5 ###
+
+## 
