@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 nixvenv/
 fieldsvenv/
+fields/
 # C extensions
 *.so
 
